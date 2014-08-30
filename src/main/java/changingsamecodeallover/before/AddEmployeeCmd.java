@@ -1,5 +1,4 @@
-package removeduplication;
+package changingsamecodeallover.before;
 
-public class AddEmployeeCmd
-{
+public class AddEmployeeCmd {
 }

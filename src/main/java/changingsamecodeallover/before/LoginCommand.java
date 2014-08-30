@@ -1,5 +1,5 @@
-package removeduplication;
+package changingsamecodeallover.before;
 
-public class LoginCommand
-{
+public class LoginCommand {
+
 }
