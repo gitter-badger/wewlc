@@ -11,6 +11,10 @@ public class TransactionGateV4 {
 	
 	private TransactionBundle transactionBundle;
 
+	public TransactionGateV4(TransactionBundle transactionBundle) {
+		this.transactionBundle = transactionBundle;
+	}
+
 	// Example of 'Wrap Method' technique
 	public void postEntries(List<Entry> entries) {
 		List<Entry> entriesToAdd = uniqueEntries(entries);
@@ -25,7 +29,7 @@ public class TransactionGateV4 {
 		transactionBundle.getListManager().add(entries);
 	}
 	
-	List<Entry> uniqueEntries(List<Entry> entries) {
+	private List<Entry> uniqueEntries(List<Entry> entries) {
 		List<Entry> result = new ArrayList<Entry>();
 		for (Iterator<Entry> it = entries.iterator(); it.hasNext();) {
 			Entry entry = (Entry) it.next();

@@ -11,6 +11,10 @@ public class TransactionGateV2 {
 	
 	private TransactionBundle transactionBundle;
 
+	public TransactionGateV2(TransactionBundle transactionBundle) {
+		this.transactionBundle = transactionBundle;
+	}
+
 	public void postEntries(List<Entry> entries) {
 		List<Entry> entriesToAdd = new LinkedList<Entry>();
 		for(Iterator<Entry> it = entries.iterator(); it.hasNext();) {

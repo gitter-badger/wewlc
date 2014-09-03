@@ -11,6 +11,10 @@ public class TransactionGateV3_1 {
 	
 	private TransactionBundle transactionBundle;
 
+	public TransactionGateV3_1(TransactionBundle transactionBundle) {
+		this.transactionBundle = transactionBundle;
+	}
+
 	// Example of 'Sprout Method' technique
 	public void postEntries(List<Entry> entries) {
 		List<Entry> entriesToAdd = uniqueEntries(entries);
@@ -22,7 +26,7 @@ public class TransactionGateV3_1 {
 	}
 	
 	// This is the 'Sprout Method'
-	List<Entry> uniqueEntries(List<Entry> entries) {
+	private List<Entry> uniqueEntries(List<Entry> entries) {
 		List<Entry> result = new ArrayList<Entry>();
 		for (Iterator<Entry> it = entries.iterator(); it.hasNext();) {
 			Entry entry = (Entry) it.next();

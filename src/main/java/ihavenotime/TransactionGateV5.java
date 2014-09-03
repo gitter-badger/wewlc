@@ -22,7 +22,7 @@ public class TransactionGateV5 implements TransactionGate {
 		transactionGate.postEntries(uniqueEntries(entries));
 	}
 	
-	List<Entry> uniqueEntries(List<Entry> entries) {
+	private List<Entry> uniqueEntries(List<Entry> entries) {
 		List<Entry> result = new ArrayList<Entry>();
 		for (Iterator<Entry> it = entries.iterator(); it.hasNext();) {
 			Entry entry = (Entry) it.next();
